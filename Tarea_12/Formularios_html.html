@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+    <!--Descripcion de la pagina para los profes y para tenerlo todo mas claro-->
+    <meta name="--Descripcion" content="Formularios de HTML">
+    <!--Autor de la pagina-->
+    <meta name="Autor" content="Pablo Pardos"> 
+</head>
+<body>
+    <header> 
+        <h1>Ejemplos de Inputs Formularios</h1>
+        <p><a href="index_ejercicios_formularios.html ">⬅ Volver atrás</a></p>
+        <hr /> 
+    </header>
+
+    <main> 
+        <h2>Todos los Inputs de HTML</h2>
+        <hr />
+        <!--Busqueda mediante search-->
+        <div>
+            <h3>Input type search</h3>
+            <p>Introduce tu búsqueda <br />
+                <input type="search" name="q" placeholder="Introduce tu busqueda">
+                <button>Buscar</button>
+            </p>
+            <br />
+            <!--Busqueda de Google-->
+            <form action="https://www.google.com/search" name="Busqueda" method="get" autocomplete="off"></form>
+            <h3>Busqueda en Google</h3>
+                <input type="Busca en Google" name="q" placeholder="Buscar....">
+                <button>Buscar!</button>
+        </div>
+        <!--Seleccionar un color-->
+        <form action="#" method="get">
+            <div>
+                <h3>Input type color</h3>
+                <p>Selecciona tu color</p>
+                <input type="color" name="color">
+            </div>
+            <button>Enviar</button>
+        </form>
+        <div>
+            <form action="#" method="get">
+                <h3>Input type date</h3>
+                <p>Selecciona tu fecha de nacimientobr <br>
+                    <input type="date" name="date_birth">
+                    </p>
+            </form>
+        </div>
+        <div>
+            <form action="#" method="get">
+                <h3>Input type time</h3>
+                <p>Selecciona la hora de tu visita<br>
+                    <input type="time" name="meeting_hour">
+                </p>
+            </form>
+        </div>
+        <div>
+            <form action="#" method="get">
+                <h3>Input type local</h3>
+                <p>Selecciona tu fecha y hora de nacimiento<br>
+                    <input type="datetime-local" name="date_birth">
+                </p>
+            </form>
+        </div>
+        <div>
+            <form action="#" method="get">
+                <h3>Input type week</h3>
+                <p>Selecciona una fecha de la semana <br>
+                    <input type="week" name="week_day">
+                </p>
+            </form>
+        </div>
+        <div>
+            <form action="#" method="get">
+                <h3>Input type range</h3>
+                <p>Indica su experiencia en HTML<br>
+                    <input type="range" name="points" min="0" max="10">
+                </p>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>

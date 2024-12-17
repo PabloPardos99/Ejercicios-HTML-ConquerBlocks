@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+    <!--Descripcion de la pagina para los profes y para tenerlo todo mas claro-->
+    <meta name="--Descripcion" content="Formularios de HTML">
+    <!--Autor de la pagina-->
+    <meta name="Autor" content="Pablo Pardos"> 
+</head>
+<body>
+    <header> 
+        <h1>Ejemplos de Inputs Formularios</h1>
+        <p><a href="index_ejercicios_formularios.html">⬅ Volver atrás</a></p>
+        <hr /> 
+    </header>
+
+    <main> 
+        <!--Ejemplo de radio button-->
+        <form action="#" method="get">
+
+            <h3>Ejemplo de radio button</h3>
+            <fieldset>
+                <legend>Zapatillas Baratillas</legend>
+                <p>Selecciona el colo deseado de tus zapatillas</p>
+                <div>
+                    <p>
+                        <input type="radio" name="color" value="Amarillo" id="yellow">
+                        <label for="yellow">Amarillo Oro</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="color" value="Rojo" id="red">
+                        <label for="red">Rojo Carmesí</label>
+                    </p>
+                </div>
+                <div>
+                    <p>Selecciona la talla de tus zapatillas</p>
+                        <input type="radio" name="talla" value="38" id="38">
+                        <label for="38">Talla 38</label> <br>
+                        <input type="radio" name="talla" value="39" id="39">
+                        <label for="39">Talla 39</label> <br>
+                        <input type="radio" name="talla" value="40" id="40">
+                        <label for="40">Talla 40</label> <br>
+                </div>
+            </fieldset>
+            <!--Atributo textarea para biografias, opiniones, etc..-->
+            <div>
+                <label for="bio">Biografia</label><br>
+                <textarea name="Biografia" id="bio" cols="30" rows="10"></textarea>
+            </div>
+            <!--Atributo Select para opciones desplegables-->
+            <div>
+                <label for="size">Selecciona la talla de tus zapatillas</label>
+                <select name="size" id="size" required>
+                    <option value="">-</option>
+                    <option value="38">Talla 38</option>
+                    <option value="39">Talla 39</option>
+                    <option value="40">Talla 40</option>
+                    <option value="41">Talla 41</option>
+                </select>
+            </div>
+
+            <button>Enviar</button>
+        </form>
+    </main>
+
+</body>
+</html>

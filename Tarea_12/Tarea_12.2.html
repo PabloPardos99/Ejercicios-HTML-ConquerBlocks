@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web</title>
+    <!--Descripcion de la pagina para los profes y para tenerlo todo mas claro-->
+    <meta name="--Descripcion" content="">
+    <!--Autor de la pagina-->
+    <meta name="Autor" content="Pablo Pardos"> 
+</head>
+<body>
+    <header> 
+        <h1>Formulario de registro - Mi web</h1>
+        <p><a href="index_ejercicios_formularios.html">⬅ Volver atrás</a></p>
+        <hr /> 
+    </header>
+
+    <main> 
+        <h2>[Tarea Clase 12.1] | Formulario de registro</h2>
+        <hr />
+        <div>
+            <form action="#" method="get" name="Formulario estructurado">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <p>
+                        <label for="name">Nombre</label> <br>
+                        <input type="text" id="name" maxlength="20" name="nombre">
+                    </p>
+                    <p>
+                        <label for="lastname">Apellidos</label> <br>
+                        <input type="text" name="apellidos" id="lastname" maxlength="20">
+                    </p>
+                    <p>
+                        <label for="dni">DNI</label> <br>
+                        <input type="text" name="dni" id="dni" maxlength="9">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de conexión</legend>
+                    <p>
+                        <label for="username">Nombre de Usuario</label> <br>
+                        <input type="text" name="username" id="username">
+                    </p>
+                    <p>
+                        <label for="passwrd">Contraseña</label> <br>
+                        <input type="password" name="passwrd" id="passwrd" required>
+                    </p>
+                    <p>
+                        <label for="repeat">Repetir Contraseña</label> <br>
+                        <input type="password" name="repeat" id="repeat" required>
+                    </p>
+                </fieldset>
+                <br>
+                <button>Enviar!</button>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>
