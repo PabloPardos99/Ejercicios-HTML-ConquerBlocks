@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes HTML</title>
+    <!--Descripcion de la pagina para los profes y para tenerlo todo mas claro-->
+    <meta name="--Descripcion" content="">
+    <!--Autor de la pagina-->
+    <meta name="Autor" content="Pablo Pardos"> 
+</head>
+<body>
+    <header> 
+        <h1>Imagenes en HTML</h1>
+        <p><a href="index_ejercicios_multimedia.html">⬅ Volver atrás</a></p>
+        <hr /> 
+    </header>
+
+    <main> 
+        <h2>Prueba de imagenes segun resolución de pantalla</h2>
+        <hr />
+    </main>
+    <picture>
+        <source media="(width ≥ 900px)"
+                srcset="https://picsum.photos/seed/xx/1080/1920">
+        <source media="(width ≥ 600px) and (width < 900px)"
+                srcset="https://picsum.photos/seed/xa/800/600">
+        <source media="(width < 600px)"
+                srcset="https://picsum.photos/seed/xxx/200/300">
+        <img src="https://picsum.photos/seed/xac/800/600" alt="Imagenes random">
+    </picture>
+
+</body>
+</html>

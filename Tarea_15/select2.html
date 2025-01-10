@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>---</title>
+    <!--Descripcion de la pagina para los profes y para tenerlo todo mas claro-->
+    <meta name="--Descripcion" content="">
+    <!--Autor de la pagina-->
+    <meta name="Autor" content="Pablo Pardos"> 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+</head>
+<body>
+    <header> 
+        <h1>Etiquetas Interactivas</h1>
+        <p><a href="index_elementos_multimedia.html">⬅ Volver atrás</a></p>
+        <hr /> 
+    </header>
+
+    <main> 
+        <h2>Ejemplo de elemento dialog</h2>
+        <hr />
+        <p>
+            Selecciona tu lenguaje favorito: 
+            <select name="" id="weblangs">
+                <option value="">-</option>
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">Javascript</option>
+            </select>
+        </p>
+    </main>
+
+</body>
+<footer>
+    Todos los derechos reservados. 2024
+
+<script>
+    $(document).ready(function () {
+        $('#weblangs').select2();
+    });
+    </script>
+</footer>
+</html>
