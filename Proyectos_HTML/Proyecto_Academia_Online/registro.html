@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Autor" content="Pablo Pardos Sánchez"> 
     <title>Home - Cuna Elektronica</title>
+    <script>
+        function validarFormulario() {
+            const password = document.getElementById("password").value;
+            const requisitos = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (!requisitos.test(password)) {
+                alert("La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, una minúscula, un número y un carácter especial.");
+                return false; // Evita el envío del formulario
+            }
+            return true; // Permite el envío del formulario
+        }
+    </script>
 </head>
 <body>
     
@@ -14,99 +26,90 @@
                 <div id="site-logo" class="site-branding">
                     <div class="site-title">
                         <img width="1265" height="300" src="content/Banner-La-Cuna-Elektronica-[Tamaño-original].png" class="bb-logo" alt decoding="async">
+                        <nav>
+                            <a href="home.html">Home</a> |
+                            <a href="quien_somos.html">Quiénes somos</a> |
+                            <a href="cursos.html">Cursos</a> |
+                            <a href="blog.html">Blog</a> |
+                            <a href="registro.html">Registro</a> |
+                            <a href="login.html">Log-In</a> |
+                            <a href="contacto.html">Contacto</a> 
+                        </nav>
                         <p>
-                            <h1>Blog</h1>
+                            <h1>Registro</h1>
+                        </p>
+                        <p>
+                            Rellena el formulario para registrarte y poder acceder a todos los cursos de la plataforma!
                         </p>
                     </div>
                 </div>
-                <nav>
-                    <a href="home.html">Home</a> |
-                    <a href="quien_somos.html">Quiénes somos</a> |
-                    <a href="cursos.html">Cursos</a> |
-                    <a href="blog.html">Blog</a> |
-                    <a href="registro.html">Registro</a> |
-                    <a href="login.html">Login</a> |
-                    <a href="contacto.html">Contacto</a> 
-                </nav>
                 <hr >
             </div>
         </header>
     </div>
     <main>
-        <p><a href="index.html">⬅ Volver atrás</a></p>
         <div>
-           <p>
-            <h2>| Noticias |</h2>
-           </p>
         </div>
             <div>
-                <form action="cursos-principiantes">
-                    <fieldset>
-                        <legend>Curos Principiantes</legend>
-                        <p>
-                           <li><a href="">Introducción a la producción musical</a></li>
-                            <div>
-                                <details>
-                                    <h2>¿Que trataremos en este curso?</h2>
-                                    <summary>👉Despliega para ver los detalles del curso</summary>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, 
-                                        consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                                    </p>
-                                </details>
-                            </div>
-                        </p>
+                <fieldset>
+                    <legend>Formulario de registro</legend>
+                    <form name="register_form" action="registrar-cliente" method="post" enctype="multipart/form-data" autocomplete="on" onsubmit="validarFormulario()">
+                            <p>
+                                <label for="name">Nombre:</label> <br>
+                                <input type="text" name="nombre" id="name" placeholder="Paco" maxlength="20" required>
+                            </p>
+
+                            <p>
+                                <label for="second-name">Apellido:</label><br>
+                                <input type="text" name="apellidos" id="second-name" placeholder="Osuna" maxlength="20" required>
+                            </p>
+
+                            <p>
+                                <label for="birthday">Fecha de nacimiento</label> <br>
+                                <input type="date" name="fecha-nacimiento" id="birthday" required>
+                            </p>
+
+                            <p>
+                                <label for="email">Email:</label> <br>
+                                <input type="email" name="email" id="email" placeholder="example@none.com" required>
+                            </p>
+
+                            <p>
+                                <label for="passwrd">Contraseña:</label> <br>
+                                <input type="password" name="password" id="password" maxlength="20" required>
+                            </p>
+
+                            <p>
+                                <label for="repeat-passwrd">Repitir contraseña:</label> <br>
+                                <input type="password" name="password" id="password" maxlength="20" required>
+                            </p>
+
+                            <p>
+                                <label for="adress">Dirección:</label> <br>
+                                <input type="text" name="adress" id="adress" placeholder="Calle X, Numero Y" required>
+                            </p>
+
+                            <p>
+                                <label for="web">Página de Contacto:</label> <br>
+                                <input type="url" name="web" id="web" placeholder="Link de tu Instagram" required>
+                            </p>
+                            
+                            <p>
+                                <label for="photo">Foto de artista:</label> <br>
+                                <input type="file" name="photo" id="photo" required>
+                            </p>
+
+                            <p>
+                                <label for="bio">Biografía de artista:</label> <br>
+                                <textarea name="bio" id="bio" maxlength="1000" cols="30" rows="10" placeholder="Cuéntanos un poco de tu historia como artista..."></textarea>
+                            </p>
+
+                            <p>
+                                <button name="send" >Enviar Formulario</button>
+                                <input type="reset" value="Borrar Formulario">
+                            </p>
+                    </form>
                     </fieldset>
-                        <div>
-                            <fieldset>
-                                <legend>Curos Intermedios</legend>
-                                <p>
-                                <li><a href="">Mezcla y mastering</a></li>
-                                    <div>
-                                        <details>
-                                            <h2>¿Que trataremos en este curso?</h2>
-                                            <summary>👉Despliega para ver los detalles del curso</summary>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, 
-                                                consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                                            </p>
-                                        </details>
-                                    </div>
-                                </p>
-                            </fieldset>
-                        </div>
-                            <div>
-                                <fieldset>
-                                    <legend>Curos Avanzados</legend>
-                                    <p>
-                                    <li><a href="">Diseño de sonido (Sound design)</a></li>
-                                        <div>
-                                            <details>
-                                                <h2>¿Que trataremos en este curso?</h2>
-                                                <summary>👉Despliega para ver los detalles del curso</summary>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, 
-                                                    consectetur adipiscing elit, 
-                                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                                                </p>
-                                            </details>
-                                        </div>
-                                    </p>
-                                </fieldset>
-                            </div>
-                </form>
-            </div>
     </main>
     <div>
         <hr>
@@ -116,9 +119,9 @@
                     © 2024 - Todos los derechos reservados a Cuna Elektronica
                 </strong>
             </p>
-            <a href="">Aviso Legal</a> |
-            <a href="">Política de cookies</a> | 
-            <a href="">Terminos y Condiciones</a> 
+            <a href="aviso_legal.html">Aviso Legal</a> |
+            <a href="politca_de_cookies.html">Política de cookies</a> | 
+            <a href="terminos_y_condiciones.html">Terminos y Condiciones</a> 
         </footer>
     </div>
 </body>
